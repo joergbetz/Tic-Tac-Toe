@@ -1,3 +1,9 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 tr {
     width: 399px;
 }
@@ -24,6 +30,10 @@ tr td:last-child {
     border-right: 0;
 }
 
+.head{
+    display: flex;
+    flex-direction: row;
+}
 
 table {
     border-collapse: collapse;
@@ -32,6 +42,27 @@ table {
 .symbol{
     height: 80px;
     position: absolute;
+}
+
+.player{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+margin-top: 24px;
+font-size: 24px;
+font-weight: bold;
+}
+
+.player-symbol{
+    height: 80px;
+    margin-top: 24px;
+    margin-bottom: 100px;
+    margin-inline: 48px;
+}
+
+.player-text{
+    margin-inline: 48px;
 }
 
 .symbol-container{
@@ -47,4 +78,8 @@ td:hover {
 
 .d-none {
     display: none;
+}
+
+.player-inactive{
+    opacity: 0.5;
 }
