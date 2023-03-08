@@ -1,4 +1,7 @@
 body{
+    background-image: url("img/tic-tac-toe-g11b62cc1e_1920.jpg");
+    background-size: cover;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +13,7 @@ tr {
 }
 
 td {
-    border: 5px solid black;
+    border: 5px solid #f7f7f7;
     height: 133px;
     width: 133px;
 }
@@ -53,6 +56,7 @@ align-items: center;
 margin-top: 24px;
 font-size: 24px;
 font-weight: bold;
+color: #f7f7f7;
 }
 
 .player-symbol{
@@ -86,7 +90,7 @@ td:hover {
 }
 
 .line{
-    background-color: black;
+    background-color: #f7f7f7;
     height: 400px;
     width: 10px;
     position: relative;
@@ -137,9 +141,13 @@ td:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-style: solid;
+    padding: 48px;
+    border-radius: 12px;
+    border-color: #f7f7f7;
 }
 
-@media (max-width:500px){
+@media (max-width:560px){
     tr {
         width: 299px;
     }
@@ -156,15 +164,15 @@ td:hover {
     }
 
     .line1{
-        left: 68px;
+        left: 55px;
     }
     
     .line2{
-        left: 169px;
+        left: 160px;
     }
     
     .line3{
-        left: 271px;
+        left: 266px;
     }
 
     .line4{
@@ -184,65 +192,66 @@ td:hover {
 
     .line7{
         top:0px;
-        left: -164px;
+        left: -162px;
     }
     
     .line8{
         top: 0px;
-        left: -174px;
+        left: -159px;
     }
 } 
 
-@media (max-width:380px){
+@media (max-width:440px){
     tr {
         width: 229px;
     }
     
     td {
         border: 5px solid black;
-        height: 89px;
-        width: 89px;
+        height: 69px;
+        width: 69px;
     }
     .line{
         width: 5px;
+        height: 220px;
         position: relative;
     }
 
     .line1{
-        left: 64px;
+        left: 39px;
     }
     
     .line2{
-        left: 155px;
+        left: 115px;
     }
     
     .line3{
-        left: 246px;
+        left: 191px;
     }
 
     .line4{
-        top:-96px;
-        left: 143px;
+        top:-77px;
+        left: 116px;
     }
     
     .line5{
         top:0px;
-        left: -145px;
+        left: -114px;
     }
     
     .line6{
-        top: 96px;
-        left: -150px;
+        top: 77px;
+        left: -114px;
     }
 
     .line7{
         top:0px;
-        left: -151px;
+        left: -114px;
     }
     
     .line8{
         top: 0px;
-        left: -158px;
+        left: -115px;
     }
 
     .player-symbol{
@@ -258,5 +267,124 @@ td:hover {
 
     .symbol {
         height: 50px;
+    }
+
+    .game-container{
+        margin: 12px;
+    }
+}
+
+@media (max-width:350px){
+    .line1{
+        left: 32px;
+    }
+    
+    .line2{
+        left: 98px;
+    }
+    
+    .line3{
+        left: 186px;
+    }
+
+    .line4{
+        top:-77px;
+        left: 116px;
+    }
+    
+    .line5{
+        top:0px;
+        left: -114px;
+    }
+    
+    .line6{
+        top: 77px;
+        left: -114px;
+    }
+
+    .line7{
+        top:0px;
+        left: -114px;
+    }
+    
+    .line8{
+        top: 0px;
+        left: -115px;
+    }
+    
+    .player-text{
+        margin-inline: 12px;
+    }
+
+    .symbol {
+        height: 50px;
+    }
+
+    .game-container{
+        margin: 12px;
+    }
+}
+
+@media (max-width:300px){
+    tr {
+        width: 229px;
+    }
+    
+    td {
+        border: 5px solid black;
+        height: 69px;
+        width: 69px;
+    }
+    .line{
+        width: 5px;
+        height: 220px;
+        position: relative;
+    }
+
+    .line1{
+        left: 26px;
+    }
+    
+    .line2{
+        left: 78px;
+    }
+    
+    .line3{
+        left: 130px;
+    }
+
+    .line4{
+        top:-77px;
+        left: 74px;
+    }
+    
+    .line5{
+        top:0px;
+        left: -75px;
+    }
+    
+    .line6{
+        top: 77px;
+        left: -74px;
+    }
+
+    .line7{
+        top:0px;
+        left: -77px;
+        rotate: 34deg;
+    }
+
+    .line8{
+        top: 0px;
+        left: -75px;
+        rotate: 145deg;
+    }
+    
+    .player-text{
+        margin-inline: 12px;
+    }
+
+    .symbol {
+        height: 40px;
     }
 }
