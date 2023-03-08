@@ -16,61 +16,69 @@ function selectField(id) {
     searchWinner(symbol);
 }
 
-function searchWinner(symbol){
+function searchWinner(symbol) {
     xSearch(symbol);
     ySearch(symbol);
     crossSearch(symbol);
     nextPlayer(symbol);
-    if (winner !== ""){
-        console.log ("Der Gewinner ist " + winner)   ;
+    if (winner !== "") {
+        console.log("Der Gewinner ist " + winner);
     }
-    
+
 }
 
-function xSearch(symbol){
-    if (fields[0] == fields[1] && fields[1] == fields[2] && fields[2]){
-        winner = symbol;        
-    }
-    if (fields[3] == fields[4] && fields[4] == fields[5] && fields[5]){
+function xSearch(symbol) {
+    if (fields[0] == fields[1] && fields[1] == fields[2] && fields[2]) {
         winner = symbol;
+        document.getElementById('line4').classList.remove('d-none');
     }
-    if (fields[6] == fields[7] && fields[7] == fields[8] && fields[8]){
+    if (fields[3] == fields[4] && fields[4] == fields[5] && fields[5]) {
         winner = symbol;
+        document.getElementById('line5').classList.remove('d-none');
+    }
+    if (fields[6] == fields[7] && fields[7] == fields[8] && fields[8]) {
+        winner = symbol;
+        document.getElementById('line6').classList.remove('d-none');
     }
     return winner;
 }
 
-function ySearch(symbol){
-    if (fields[0] == fields[4] && fields[4] == fields[8] && fields[8]){
+function ySearch(symbol) {
+    if (fields[0] == fields[3] && fields[3] == fields[6] && fields[6]) {
         winner = symbol;
+        document.getElementById('line1').classList.remove('d-none');
     }
-    if (fields[2] == fields[4] && fields[4] == fields[6] && fields[6]){
+    if (fields[1] == fields[4] && fields[4] == fields[7] && fields[7] != undefined) {
         winner = symbol;
+        document.getElementById('line2').classList.remove('d-none');
     }
-    if (fields[0] == fields[3] && fields[3] == fields[6] && fields[6]){
+    if (fields[2] == fields[5] && fields[5] == fields[8] && fields[8] != undefined) {
         winner = symbol;
-    }
-    return winner;
-}
-
-function crossSearch(symbol){
-    if (fields[1] == fields[4] && fields[4] == fields[7] && fields[7] != undefined){
-        winner = symbol;
-    }
-    if (fields[2] == fields[5] && fields[5] == fields[8] && fields[8] != undefined){
-        winner = symbol;
+        document.getElementById('line3').classList.remove('d-none');
     }
     return winner;
 }
 
-function nextPlayer(symbol){
-    if (symbol == 'circle'){
+function crossSearch(symbol) {
+    if (fields[0] == fields[4] && fields[4] == fields[8] && fields[8]) {
+        winner = symbol;
+        document.getElementById('line8').classList.remove('d-none')
+    }
+    if (fields[2] == fields[4] && fields[4] == fields[6] && fields[6]) {
+        winner = symbol;
+        document.getElementById('line7').classList.remove('d-none');
+    }
+    return winner;
+}
+
+function nextPlayer(symbol) {
+    if (symbol == 'circle') {
         document.getElementById('player1').classList.add('player-inactive');
         document.getElementById('player2').classList.remove('player-inactive');
     }
-    if (symbol == 'cross'){
+    if (symbol == 'cross') {
         document.getElementById('player1').classList.remove('player-inactive');
         document.getElementById('player2').classList.add('player-inactive');
-    }    
     }
-    
+}
+

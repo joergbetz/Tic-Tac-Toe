@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 tr {
     width: 399px;
@@ -82,4 +83,180 @@ td:hover {
 
 .player-inactive{
     opacity: 0.5;
+}
+
+.line{
+    background-color: black;
+    height: 400px;
+    width: 10px;
+    position: relative;
+}
+
+.rotate90{
+    rotate: 90deg;
+}
+
+.line1{
+    left: 73px;
+}
+
+.line2{
+    left: 213px;
+}
+
+.line3{
+    left: 353px;
+}
+
+.line4{
+    top:-140px;
+    left: 210px;
+}
+
+.line5{
+    top:0px;
+    left: -215px;
+}
+
+.line6{
+    top: 141px;
+    left: -225px;
+}
+
+.line7{
+    top:0px;
+    left: -214px;
+}
+
+.line8{
+    top: 0px;
+    left: -214px;
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:500px){
+    tr {
+        width: 299px;
+    }
+    
+    td {
+        border: 5px solid black;
+        height: 99px;
+        width: 99px;
+    }
+    .line{
+        height: 280px;
+        width: 5px;
+        position: relative;
+    }
+
+    .line1{
+        left: 68px;
+    }
+    
+    .line2{
+        left: 169px;
+    }
+    
+    .line3{
+        left: 271px;
+    }
+
+    .line4{
+        top:-107px;
+        left: 162px;
+    }
+    
+    .line5{
+        top:0px;
+        left: -159px;
+    }
+    
+    .line6{
+        top: 105px;
+        left: -164px;
+    }
+
+    .line7{
+        top:0px;
+        left: -164px;
+    }
+    
+    .line8{
+        top: 0px;
+        left: -174px;
+    }
+} 
+
+@media (max-width:380px){
+    tr {
+        width: 229px;
+    }
+    
+    td {
+        border: 5px solid black;
+        height: 89px;
+        width: 89px;
+    }
+    .line{
+        width: 5px;
+        position: relative;
+    }
+
+    .line1{
+        left: 64px;
+    }
+    
+    .line2{
+        left: 155px;
+    }
+    
+    .line3{
+        left: 246px;
+    }
+
+    .line4{
+        top:-96px;
+        left: 143px;
+    }
+    
+    .line5{
+        top:0px;
+        left: -145px;
+    }
+    
+    .line6{
+        top: 96px;
+        left: -150px;
+    }
+
+    .line7{
+        top:0px;
+        left: -151px;
+    }
+    
+    .line8{
+        top: 0px;
+        left: -158px;
+    }
+
+    .player-symbol{
+        height: 40px;
+        margin-top: 12px;
+        margin-bottom: 80px;
+        margin-inline: 12px;
+    }
+    
+    .player-text{
+        margin-inline: 12px;
+    }
+
+    .symbol {
+        height: 50px;
+    }
 }

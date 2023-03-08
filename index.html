@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,81 +9,97 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
     <div class="head">
         <div class="player" id="player1">
             <div class="player-text">Spieler 1</div>
-            <img  class="player-symbol"  src="img/circle.png"> 
+            <img class="player-symbol" src="img/circle.png">
         </div>
-        <div class="player  player-inactive" id="player2">            
+        <div class="player  player-inactive" id="player2">
             <div class="player-text">Spieler 2</div>
-            <img  class="player-symbol" src="img/cross.png">
+            <img class="player-symbol" src="img/cross.png">
         </div>
+
     </div>
-    
-    <table>
-        <tr>
-            <td onclick="selectField(0)">
-                <div class="symbol-container">
-                    <img id="circle0" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross0" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>                
-                
-            <td onclick="selectField(1)">
-                <div class="symbol-container">
-                    <img id="circle1" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross1" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-            <td onclick="selectField(2)">
-                <div class="symbol-container">
-                    <img id="circle2" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross2" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td onclick="selectField(3)">
-                <div class="symbol-container">
-                    <img id="circle3" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross3" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-            <td onclick="selectField(4)">
-                <div class="symbol-container">
-                    <img id="circle4" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross4" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-            <td onclick="selectField(5)">
-                <div class="symbol-container">
-                    <img id="circle5" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross5" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td onclick="selectField(6)">
-                <div class="symbol-container">
-                    <img id="circle6" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross6" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-            <td onclick="selectField(7)">
-                <div class="symbol-container">
-                    <img id="circle7" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross7" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-            <td onclick="selectField(8)">
-                <div class="symbol-container">
-                    <img id="circle8" class="symbol d-none" src="img/circle.png"> 
-                    <img id="cross8" class="symbol d-none" src="img/cross.png">
-                </div>
-            </td>
-        </tr>
-    </table>  
+    <div class="game-container">
         
+        <div class="line line1 d-none" id="line1"></div>
+        <div class="line line2 d-none" id="line2"></div>
+        <div class="line line3 d-none" id="line3"></div>
+        <div class="line line4 d-none rotate90" id="line4"></div>
+        
+
+        <table>
+            <tr>
+                <td onclick="selectField(0)">
+                    <div class="symbol-container">
+                        <img id="circle0" class="symbol d-none" src="img/circle.png">
+                        <img id="cross0" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+
+                <td onclick="selectField(1)">
+                    <div class="symbol-container">
+                        <img id="circle1" class="symbol d-none" src="img/circle.png">
+                        <img id="cross1" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+                <td onclick="selectField(2)">
+                    <div class="symbol-container">
+                        <img id="circle2" class="symbol d-none" src="img/circle.png">
+                        <img id="cross2" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="selectField(3)">
+                    <div class="symbol-container">
+                        <img id="circle3" class="symbol d-none" src="img/circle.png">
+                        <img id="cross3" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+                <td onclick="selectField(4)">
+                    <div class="symbol-container">
+                        <img id="circle4" class="symbol d-none" src="img/circle.png">
+                        <img id="cross4" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+                <td onclick="selectField(5)">
+                    <div class="symbol-container">
+                        <img id="circle5" class="symbol d-none" src="img/circle.png">
+                        <img id="cross5" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="selectField(6)">
+                    <div class="symbol-container">
+                        <img id="circle6" class="symbol d-none" src="img/circle.png">
+                        <img id="cross6" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+                <td onclick="selectField(7)">
+                    <div class="symbol-container">
+                        <img id="circle7" class="symbol d-none" src="img/circle.png">
+                        <img id="cross7" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+                <td onclick="selectField(8)">
+                    <div class="symbol-container">
+                        <img id="circle8" class="symbol d-none" src="img/circle.png">
+                        <img id="cross8" class="symbol d-none" src="img/cross.png">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="line line5 d-none rotate90" id="line5"></div>
+        <div class="line line6 d-none rotate90" id="line6"></div>
+        <div class="line line7 d-none" style="rotate:45deg" id="line7"></div>
+        <div class="line line8 d-none" style="rotate:135deg" id="line8"></div>
+    </div>
+
+
 </body>
+
 </html>
