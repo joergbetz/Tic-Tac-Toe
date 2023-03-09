@@ -1,6 +1,7 @@
 let fields = [];
 let symbol = 'cross';
 let winner = '';
+let move = 0;
 
 
 function selectField(id) {
@@ -21,6 +22,10 @@ function searchWinner(symbol) {
     ySearch(symbol);
     crossSearch(symbol);
     nextPlayer(symbol);
+    checkDraw();
+    if (move == 9){
+        console.log ('Unentschieden')
+    }
     if (winner !== "") {
         console.log("Der Gewinner ist " + winner);
     }
@@ -82,3 +87,7 @@ function nextPlayer(symbol) {
     }
 }
 
+function checkDraw(){
+    move++;
+    return move;
+}
