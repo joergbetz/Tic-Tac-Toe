@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <img class="game-over d-none" id="game-over" src="img/game-over.png">;
+    <button onclick="restart()" id="restart-btn" class="restart-btn d-none" >Restart</button>
+    <div class="winner d-none" id="winner"></div>
     <div class="head">
         <div class="player" id="player1">
             <div class="player-text">Spieler 1</div>
@@ -24,14 +27,14 @@
     </div>
     <div class="game-container">
         
-        <div class="line line1 d-none" id="line1"></div>
-        <div class="line line2 d-none" id="line2"></div>
-        <div class="line line3 d-none" id="line3"></div>
-        <div class="line line4 d-none rotate90" id="line4"></div>
-        <div class="line line5 d-none rotate90" id="line5"></div>
-        <div class="line line6 d-none rotate90" id="line6"></div>
-        <div class="line line7 d-none" style="rotate:45deg" id="line7"></div>
-        <div class="line line8 d-none" style="rotate:135deg" id="line8"></div>
+        <div class="line line1" id="line1"></div>
+        <div class="line line2" id="line2"></div>
+        <div class="line line3" id="line3"></div>
+        <div class="line line4 rotate90" id="line4"></div>
+        <div class="line line5 rotate90" id="line5"></div>
+        <div class="line line6 rotate90" id="line6"></div>
+        <div class="line line7" style="rotate:45deg" id="line7"></div>
+        <div class="line line8" style="rotate:135deg" id="line8"></div>
 
         <table>
             <tr>

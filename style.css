@@ -97,37 +97,47 @@ td:hover {
     height: 400px;
     width: 10px;
     position: absolute;
+    transform: scaleX(0.0);
+    transform: scaley(0.0);
+    transition: transform 225ms ease-in-out;
 }
 
 .rotate90{
-    rotate: 90deg;
+   transform: rotate(90deg) scaleX(0.0);
 }
 
 .line1{
     left: 62px;
+    transform: scaley(0.0);
+    
 }
 
 .line2{
     left: 201px;
+    transform: scaley(0.0);
 }
 
 .line3{
     left: 341px;
+    transform: scaley(0.0);
 }
 
 .line4{
     top:-133px;
     left: 203px;
+    transform: scaleX(0.0);
 }
 
 .line5{
     top:9px;
     left: 203px;
+    transform: scaleX(0.0);
 }
 
 .line6{
     top: 147px;
     left: 203px;
+    transform: scaleX(0.0);
 }
 
 .line7{
@@ -150,6 +160,52 @@ td:hover {
     right: 0;
 }
 
+.game-over{
+    position: absolute;
+    bottom: 10vh;
+    height: 60vh;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+.restart-btn{
+    z-index: 3;
+    position: absolute;
+    bottom: 5vH;
+    border: 1px solid rgba(0,0,0, 0.5);
+    background-color: #1c0b7f;
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    color: #f7f7f7;
+    cursor: pointer;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+.winner{
+    background-color: #1c0b7f;
+    color: #f7f7f7;
+    font-size: 32px;
+    padding: 12px;
+    text-align: center;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media (max-width: 770px){
+    .game-over{
+        height: 40vh;
+    }
+}
 @media (max-width:560px){
     tr {
         width: 299px;
@@ -199,10 +255,14 @@ td:hover {
     .line8{
         top: 0px;
         left: 159px;
-    }    
+    }  
+    
+    .game-over{
+        height: 25vh;
+    }
 } 
 
-@media (max-width:360px){
+@media (max-width:380px){
     tr {
         width: 299px;
     }
@@ -227,8 +287,8 @@ td:hover {
     
     .line{
         height: 280px;
-        width: 5px;
-        position: relative;
+        /* width: 5px;
+        position: relative; */
     }
 } 
 
